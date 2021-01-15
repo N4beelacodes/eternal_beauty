@@ -1,0 +1,80 @@
+{% extends 'beauty_store/basic.html' %}
+{% load static %}
+{% block body %}
+		<div id="contents">
+			<div id="main">
+				<form action="/" method="post" id="cart">
+					<a href="/beauty_store/checkout" class="checkout"></a>
+					<table>
+						<thead>
+							<tr>
+								<th>Description</th>
+								<th>Unit Price</th>
+								<th>Quantity</th>
+								<th class="last-child">Total</th>
+							</tr>
+						</thead>
+						<tbody>
+						{% for item in items %}
+							<tr>
+								<td><div class="frame">
+										<img src="{{item.product.imageURL}}" alt="Img" height="82" width="90">
+									</div>
+									<span class="title">{{item.product.name}}</span>
+									<p>
+										{{item.product.desc}}
+									</p></td>
+								<td>Rs. {{item.product.price|floatformat:2}}</td>
+								<td>{{item.quantity}}
+
+						<div class="quantity">
+							<img data-product={{item.product.id}} data-action="add" class="chg-quantity update-cart" src="{% static  'images/arrow-up.png' %}">
+
+							<img data-product={{item.product.id}} data-action="remove" class="chg-quantity update-cart" src="{% static  'images/arrow-down.png' %}">
+						</div>
+								</td>
+<!--								<td><input type="text" class="quantity" onMouseUp="return false;" onFocus="javascript:this.select();">-->
+<!--									<a href="/beauty_store/cart" class="remove">Remove</a></td>-->
+								<td><span class="total">Rs. {{item.get_total}}</span></td>
+							</tr>
+						{% endfor %}
+
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="3">Subtotal:</td>
+								<td>Rs. {{order.get_cart_total|floatformat:2}}</td>
+							</tr>
+						</tfoot>
+					</table>
+					<input type="submit" value="" class="shopping">
+					<input type="submit" value="" class="update">
+				</form>
+			</div>
+			<div id="sidebar">
+				<h1>Shopping Cart</h1>
+			</div>
+		</div>
+
+</body>
+</html>
+{% endblock %}
+	{% block css %}
+.quantity{
+	display: inline-block;
+	font-weight: 700;
+	padding-right:10px;
+}
+.chg-quantity{
+	bg-color: #a33973;
+	width: 12px;
+	cursor: pointer;
+	display: block;
+	margin-top: 5px;
+	transition:.1s;
+}
+
+.chg-quantity:hover{
+	opacity: .6;
+}
+{% endblock %}

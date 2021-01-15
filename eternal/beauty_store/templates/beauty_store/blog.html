@@ -1,0 +1,47 @@
+{% extends 'beauty_store/basic.html' %}
+{% load static %}
+{% block body %}
+		<div id="contents">
+			<div id="main">
+				<div class="contentbox">
+					<div class="links">
+						<a href="/" class="time">05 July 2012</a> <a href="/" class="comments">2 Comments</a>
+						<h2>We Have Free Templates for Everyone</h2>
+					</div>
+					<img src="{% static 'images/beauties.jpg' %}" alt="Img" height="400" width="670">
+					<p>
+						Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What's more, they're absolutely free! You can do a lot with them. You can modify them. You can use them to design websites for clients, so long as you agree with the <a href="http://www.freewebsitetemplates.com/about/terms/">Terms of Use</a>. You can even remove all our links if you want to. If you're experiencing issues and concerns about this website template, join the discussion <a href="http://www.freewebsitetemplates.com/forums/">on our forum</a> and meet other people in the community who share the same interests with you.
+					</p>
+				</div>
+				<form action="/" method="post" id="message">
+					<h2>Add a Comment</h2>
+					<ul>
+						<li>
+							<input type="text" value="" class="txtfield">
+							<label>Name</label>
+						</li>
+						<li>
+							<input type="text" value="" class="txtfield">
+							<label>Email</label>
+						</li>
+						<li>
+							<input type="text" value="" class="txtfield">
+							<label>Website</label>
+						</li>
+						<li>
+							<textarea></textarea>
+							<label>Message</label>
+						</li>
+						<li>
+							<input type="submit" value="Submit" class="btn">
+						</li>
+					</ul>
+				</form>
+			</div>
+			<div id="sidebar">
+				<h1>Blog</h1>
+			</div>
+		</div>
+{% end block %}
+</body>
+</html>

@@ -1,0 +1,126 @@
+{% extends 'beauty_store/basic.html' %}
+{% load static %}
+{% block body %}
+		<div id="contents">
+			<div id="main">
+				<div id="adbox">
+					<img src="{% static 'images/eye-beauty.jpg' %}" alt="Img" height="384" width="700">
+					<div class="info">
+						<h1>header ends</h1>
+						<p>
+							Quisque ornare, purus sit amet rutrum gravida.
+						</p>
+						<a href="" class="shop">Shop Now</a>
+					</div>
+				</div>
+				<ul id="promotions">
+					<li>
+						<div class="poster">
+							<a href="beauty_store/fragrance"> <img src="{% static 'images/fragrance.jpg' %}" alt="Img" height="282" width="204"> <span>Special Offers!</span></a>
+						</div>
+						<a href="beauty_store/fragrance">Shop</a>
+						<h2>Fragrance</h2>
+						<p>
+							Nullam avodio iaculis ante, ac placerat tellus turpis ut. neque. In libero sem, vehicula quis feugiat non, malesuada nec tellus.
+						</p>
+					</li>
+					<li>
+						<div class="poster">
+							<a href="beauty_store/cosmetic"> <img src="{% static 'images/cosmetics.jpg' %}" alt="Img" height="282" width="204"></a>
+						</div>
+						<a href="beauty_store/cosmetic">Shop</a>
+						<h2>Cosmetics</h2>
+						<p>
+							Nullam avodio iaculis ante, ac placerat tellus turpis ut. neque. In libero sem, vehicula quis feugiat non, malesuada nec tellus.
+						</p>
+					</li>
+					<li>
+						<div class="poster">
+							<a href="beauty_store/skincare"> <img src="{% static 'images/skin-care.jpg' %}" alt="Img" height="282" width="204"></a> <span class="clearance"></span>
+						</div>
+						<a href="beauty_store/skincare">Shop</a>
+						<h2>Skin Care</h2>
+						<p>
+							Nullam avodio iaculis ante, ac placerat tellus turpis ut. neque. In libero sem, vehicula quis feugiat non, malesuada nec tellus.
+						</p>
+					</li>
+				</ul>
+				<div class="sidebar">
+					<div id="connect" class="box">
+						<h2>Stay Connected</h2>
+						<a href="http://freewebsitetemplates.com/go/facebook/" target="_blank" class="facebook"></a> <a href="http://freewebsitetemplates.com/go/twitter/" target="_blank" class="twitter"></a> <a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank" class="googleplus"></a> <a href="http://freewebsitetemplates.com/go/youtube/" target="_blank" class="vimeo"></a>
+					</div>
+					<div id="newsletter" class="box">
+						<h2>Sign up for Newsletter</h2>
+						<form action="" method="post">
+							<input type="text" value="Email-address" onBlur="javascript:if(this.value==''){this.value=this.defaultValue;}" onFocus="javascript:if(this.value==this.defaultValue){this.value='';}">
+							<input type="submit" value="Subscribe">
+						</form>
+						<p>
+							Nullam aliquam, lorem vitae ornare eleifend, diam odio iaculis ante, ac placerat tellus.
+						</p>
+					</div>
+				</div>
+				<div id="updates" class="box">
+					<h2>Latest Blogs</h2>
+					<ul>
+						<li>
+							<img src="{% static 'images/curls.jpg' %}" alt="Img" height="90" width="136">
+							<div class="links">
+								<h4>Nullam avodio iaculis</h4>
+								<a href="" class="time">05 July 2012</a> <a href="" class="comments">2 Comments</a>
+							</div>
+							<p>
+								In hac habitasse platea dictumst. Aenean tristique magna ac metus vestibulum quis condimentum eros volutpat. <a href="blog.html">Read More.</a>
+							</p>
+						</li>
+						<li>
+							<img src="{% static 'images/comb.jpg' %}" alt="Img" height="90" width="136">
+							<div class="links">
+								<h4>Nullam avodio iaculis</h4>
+								<a href="" class="time">05 July 2012</a> <a href="" class="comments">2 Comments</a>
+							</div>
+							<p>
+								In hac habitasse platea dictumst. Aenean tristique magna ac metus vestibulum quis condimentum eros volutpat. <a href="blog.html">Read More.</a>
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="sidebar">
+				<div class="cart">
+					<a href="beauty_store/cart">View Cart</a> <span>Your cart<br> is empty</span>
+				</div>
+				<div class="news">
+					<h2>What&rsquo;s New</h2>
+					<ul>
+						<li>
+							<a href="beauty_store/news"> <img src="{% static 'images/makeUp.jpg' %}" alt="Img" height="111" width="178"> Nullam avodio iaculis</a>
+						</li>
+						<li>
+							<a href="beauty_store/news"> <img src="{% static 'images/lipsticks-refill.jpg' %}" alt="Img" height="111" width="178"> Lorem ipsum dolor sit</a>
+						</li>
+						<li>
+							<a href="beauty_store/news"> <img src="{% static 'images/powders.jpg' %}" alt="Img" height="111" width="178"> Lorem ipsum dolor sit</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box">
+					<h2>Featured Items</h2>
+					<ul>
+						<li>
+							<a href="beauty_store/news"> <img src="{% static 'images/lipsticks-small.png' %}" alt="Img" height="111" width="178"> Nullam avodio iaculis</a>
+						</li>
+						<li>
+							<a href="beauty_store/news"> <img src="{% static 'images/powder-small.png' %}" alt="Img" height="111" width="178"> Lorem ipsum dolor sit</a>
+						</li>
+						<li>
+							<a href="beauty_store/news"> <img src="{% static 'images/lipsticks2-small.png' %}" alt="Img" height="111" width="178"> Lorem ipsum dolor sit</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+</body>
+</html>
+{% endblock %}

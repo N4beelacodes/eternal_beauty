@@ -1,0 +1,96 @@
+{% extends 'beauty_store/basic.html' %}
+{% load static %}
+{% block body %}
+		<div id="contents">
+			<div id="main">
+				<div id="items">
+					<ul>
+							{% for product in products %}
+						<li class="box">
+							<a href="/beauty_store/cosmetic"><img src="{{product.imageURL}}" alt="Img" height="186" width="178">
+							<h3>{{product.name}}</h3>
+							<span class="price">Rs. {{product.price}}</span></a>
+							<p>
+								{{product.desc}}
+							</p>
+							<button data-product="{{product.id}}" data-action="add" class="btnCart update-cart">Add to Cart</button>
+						</li>
+						{% endfor %}
+
+					</ul>
+				</div>
+			</div>
+			<div id="sidebar">
+				<h1>Cosmetics</h1>
+				<ul class="menu">
+					<li>
+						<span>Face</span>
+						<ul>
+							<li>
+								<a href="/beauty_store/cosmetic">Blush</a>
+							</li>
+							<li class="selected">
+								<a href="/beauty_store/cosmetic">Bronzers</a>
+							</li>
+							<li>
+								<a href="/beauty_store/cosmetic">Compacts</a>
+							</li>
+							<li>
+								<a href="/beauty_store/cosmetic">Concealers</a>
+							</li>
+							<li>
+								<a href="/beauty_store/cosmetic">Foundations</a>
+							</li>
+							<li>
+								<a href="/beauty_store/cosmetic">Powders</a>
+							</li>
+							<li>
+								<a href="/beauty_store/cosmetic">Primers</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span>Eyes</span>
+						<ul>
+							<li>
+								<a href="/beauty_store/cosmetic">Brows</a>
+							</li>
+							<li>
+								<a href="/beauty_store/cosmetic">Eyeliners</a>
+							</li>
+							<li>
+								<a href="/beauty_store/cosmetic">Eyeshadows</a>
+							</li>
+							<li>
+								<a href="/beauty_store/cosmetic">Mascara</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span>Lips</span>
+						<ul>
+							<li>
+								<a href="/beauty_store/cosmetic">Lip Gloss</a>
+							</li>
+							<li>
+								<a href="/beauty_store/cosmetic">Lip Pencils</a>
+							</li>
+							<li>
+								<a href="/beauty_store/cosmetic">Lipsticks</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<span>Nails</span>
+						<ul>
+							<li>
+								<a href="/beauty_store/cosmetic">Nail Polishes</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+</body>
+</html>
+{% endblock %}

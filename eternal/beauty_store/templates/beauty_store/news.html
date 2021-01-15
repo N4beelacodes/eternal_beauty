@@ -1,0 +1,64 @@
+{% extends 'beauty_store/basic.html' %}
+{% load static %}
+{% block body %}
+		<div id="contents">
+			<div id="main">
+				<ul id="products">
+					<li>
+						<div class="box details">
+							<h3>Lipsticks</h3>
+							<span class="price">$1.00</span>
+							<p>
+								Nullam avodio iaculis ante, ac placerat tellus turpis ut. neque. In libero sem, vehicula quis feugiat non, malesuada nec tellus.
+							</p>
+							<p>
+								In hac habitasse platea dictumst. Aenean tristique magna ac metus vestibulum quis condimentum eros volutpat.
+							</p>
+							<a href="/beauty_store/cart" class="btnCart">Add to Cart</a>
+						</div>
+						<div class="box view">
+							<a href="/beauty_store/cosmetic"><img src="{% static 'images/lipsticks2-large.jpg' %}" alt="Img" height="347" width="458"></a>
+						</div>
+					</li>
+					<li>
+						<div class="box details">
+							<h3>Lipsticks</h3>
+							<span class="price">$1.00</span>
+							<p>
+								Nullam avodio iaculis ante, ac placerat tellus turpis ut. neque. In libero sem, vehicula quis feugiat non, malesuada nec tellus.
+							</p>
+							<p>
+								In hac habitasse platea dictumst. Aenean tristique magna ac metus vestibulum quis condimentum eros volutpat.
+							</p>
+							<a href="/beauty_store/cart" class="btnCart">Add to Cart</a>
+						</div>
+						<div class="box view">
+							<a href="/beauty_store/cosmetic"><img src="{% static 'images/lipsticks-large.jpg' %}" alt="Img" height="347" width="458"></a>
+						</div>
+					</li>
+					<li>
+						<div class="box details">
+							<h3>Lipsticks</h3>
+							<span class="price">$1.00</span>
+							<p>
+								Nullam avodio iaculis ante, ac placerat tellus turpis ut. neque. In libero sem, vehicula quis feugiat non, malesuada nec tellus.
+							</p>
+							<p>
+								In hac habitasse platea dictumst. Aenean tristique magna ac metus vestibulum quis condimentum eros volutpat.
+							</p>
+							<a href="/beauty_store/cart" class="btnCart">Add to Cart</a>
+						</div>
+						<div class="box view">
+							<a href="/beauty_store/cosmetic"><img src="{% static 'images/powder-large.jpg' %}" alt="Img" height="347" width="458"></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div id="sidebar">
+				<h1>What&rsquo;s New</h1>
+			</div>
+		</div>
+
+</body>
+</html>
+{% endblock %}

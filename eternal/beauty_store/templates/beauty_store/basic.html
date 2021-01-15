@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+{% load static %}
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Eternal Beauty Essentials Website Template</title>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+	<link rel="stylesheet" href="{% static 'css/ie.css' %}" type="text/css" charset="utf-8">
+</head>
+<body>
+	<div id="page">
+		<div id="header">
+			<div id="logo">
+				<a href="/"><img src="{% static 'images/logo.png' %}" alt="LOGO"></a>
+			</div>
+			<div id="navigation">
+				<ul>
+					<li class="selected">
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/beauty_store/news">What&rsquo;s New</a>
+					</li>
+					<li>
+						<a href="/beauty_store/cosmetics">Cosmetics</a>
+					</li>
+					<li>
+						<a href="/beauty_store/skincare">Skincare</a>
+					</li>
+					<li>
+						<a href="/beauty_store/fragrance">Fragrance</a>
+					</li>
+					<li>
+						<a href="/beauty_store/about">About</a>
+					</li>
+					<li>
+						<a href="/beauty_store/blogs">Blog</a>
+					</li>
+					<li>
+						<a href="/beauty_store/contact">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+        {% block body %}{% endblock %}
+
+		<div id="footer">
+			<ul class="navigation">
+				<li class="selected">
+					<a href="/">Home</a>
+				</li>
+				<li>
+					<a href="/beauty_store/news">What&rsquo;s New</a>
+				</li>
+				<li>
+					<a href="/beauty_store/cosmetics">Cosmetics</a>
+				</li>
+				<li>
+					<a href="/beauty_store/skincare">Skincare</a>
+				</li>
+				<li>
+					<a href="/beauty_store/fragrance">Fragrance</a>
+				</li>
+				<li>
+					<a href="/beauty_store/about">About</a>
+				</li>
+				<li>
+					<a href="/beauty_store/blogs">Blog</a>
+				</li>
+				<li>
+					<a href="/beauty_store/contact">Contact</a>
+				</li>
+			</ul>
+			<p id="footnote">
+				© Eternal Beauty Essentials 2021. All Rights Reserved.
+			</p>
+		</div>
+	</div>
+
+
+<script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
+
+<script type="text/javascript">
+console.log('basic.html')
+	var user = '{{request.user}}'
+
+		function getToken(name){			// get cookie changed to getToken
+		var cookieValue = null;
+		if (document.cookie && document.cookie !== ''){
+			var cookie = document.cookie.split(';');
+			for (var i = 0; i < cookie.length; i++){
+				var cookie = cookie[i].trim();
+				// Does this cookie string begin with the name we want?
+				if (cookie.substring(0, name.length + 1) === (name + '='))
+					{
+					cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+					break;
+				}
+			}
+		}
+		return cookieValue;
+	}
+	var csrftoken = getToken('csrftoken');
+
+		function getCookie(name){
+		// Split cookie string and get all individual name=value pairs in an array
+		var cookieArr = document.cookie.split(";");
+
+		// Loop through the array elements
+		for(var i = 0; i < cookieArr.length; i++){
+			var cookiePair = cookieArr[i].split("=");
+
+			/* Removing whitespaces at the beginning of the cookie name=value pair
+			ad compare it with the given string  */
+			if (name == cookiePair[0].trim()) {
+				// Decode the cookie value and return
+				return decodeURIComponent(cookiePair[i]);
+			}
+		}
+	// Return null if not found
+	return null;
+}
+var cart = JSON.parse(getCookie('cart'));
+if (cart == undefined) {
+	cart = {};
+	console.log('cart was created');
+	document.cookie = 'cart=' + JSON.stringify(cart) + ";domain=;path=/";
+}
+console.log('cart:', cart);
+
+
+</script>
+<script>
+{% block js %}
+{% endblock %}
+</script>
+<style>
+	{% block css %}
+	{% endblock %}
+</style>

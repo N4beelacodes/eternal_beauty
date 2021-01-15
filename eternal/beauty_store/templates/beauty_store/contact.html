@@ -1,0 +1,64 @@
+{% extends 'beauty_store/basic.html' %}
+{% load static %}
+{% block body %}
+		<div id="contents">
+			<div id="main">
+				<div id="adbox">
+					<img src="{% static 'images/makeUp-large.jpg' %}" alt="Img" height="384" width="700">
+					<div class="info">
+						<h1>Lorem Ipsum</h1>
+						<p>
+							Quisque ornare,<br> purus sit amet<br> rutrum gravida.<br> neque ligula
+						</p>
+						<a href="/" class="shop">Shop Now</a>
+					</div>
+				</div>
+				<div id="contact">
+					<form action="/beauty_store/contact" method="post" id="message">{% csrf_token %}
+						<h2>Add a Comment</h2>
+						<ul>
+							<li>
+								<input type="text" value="" class="txtfield" name="name" id="name">
+								<label>Name</label>
+							</li>
+							<li>
+								<input type="text" value="" class="txtfield" name="email" id="email">
+								<label>Email</label>
+							</li>
+							<li>
+								<input type="text" value="" class="txtfield" name="phone" id="phone">
+								<label>Phone</label>
+							</li>
+							<li>
+								<textarea name="desc" name="desc" id="desc" ></textarea>
+<!--								<input type="textarea" value="" class="textfield" name="desc" id="desc" >-->
+								<label>Message</label>
+							</li>
+							<li>
+								<input type="submit" value="Submit" class="btn">
+							</li>
+						</ul>
+					</form>
+					<div class="contentbox details">
+						<h2>Details</h2>
+						<ul>
+							<li class="home">
+								123 Canyon Road Beverly Hills, CA 12345 USA
+							</li>
+							<li class="phone">
+								+01.234.456.786 +01.345.678.890
+							</li>
+							<li class="email">
+								info@website.com
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="sidebar">
+				<h1>Contact</h1>
+			</div>
+		</div>
+</body>
+</html>
+{% endblock %}

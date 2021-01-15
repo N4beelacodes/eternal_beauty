@@ -1,0 +1,75 @@
+{% extends 'beauty_store/basic.html' %}
+{% load static %}
+{% block body %}
+		<div id="contents">
+			<div id="main">
+				<div id="adbox">
+					<img src="{% static 'images/skin-care-large.jpg' %}" alt="Img" height="384" width="700">
+					<div class="info2">
+						<h1>Lorem Ipsum</h1>
+						<p>
+							Quisque ornare, purus sit amet rutrum gravida.
+						</p>
+						<a href="/" class="shop2">Shop Now</a>
+					</div>
+				</div>
+				<div id="items">
+					<h3>Featured Items</h3>
+					<ul>
+						<li class="box">
+							<a href="/beauty_store/cosmetic"><img src="{% static 'images/lipsticks.png' %}" alt="Img" height="186" width="178">
+							<h3>Lipsticks</h3>
+							<span class="price">$1.00</span></a>
+							<p>
+								Nullam avodio iaculis ante, ac placerat tellus turpis ut. neque. In libero sem, vehicula quis feugiat non, malesuada nec tellus.
+							</p>
+							<a href="/beauty_store/cart" class="btnCart">Add to Cart</a>
+						</li>
+						<li class="box">
+							<a href="/beauty_store/cosmetic"><img src="{% static 'images/lipsticks2.png' %}" alt="Img" height="186" width="178">
+							<h3>Lipsticks</h3>
+							<span class="price">$1.00</span></a>
+							<p>
+								Nullam avodio iaculis ante, ac placerat tellus turpis ut. neque. In libero sem, vehicula quis feugiat non, malesuada nec tellus.
+							</p>
+							<a href="/beauty_store/cart" class="btnCart">Add to Cart</a>
+						</li>
+						<li class="box">
+							<a href="/beauty_store/cosmetic"><img src="{% static 'images/powder.png' %}" alt="Img" height="186" width="178">
+							<h3>Lipsticks</h3>
+							<span class="price">$1.00</span></a>
+							<p>
+								Nullam avodio iaculis ante, ac placerat tellus turpis ut. neque. In libero sem, vehicula quis feugiat non, malesuada nec tellus.
+							</p>
+							<a href="/beauty_store/cart" class="btnCart">Add to Cart</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="sidebar">
+				<h1>Skincare</h1>
+				<ul class="menu2">
+					<li>
+						<a href="/beauty_store/skincare">CLEANSER &frasl; TONERS</a>
+					</li>
+					<li class="selected">
+						<a href="/beauty_store/skincare">EYE CARE</a>
+					</li>
+					<li>
+						<a href="/beauty_store/skincare">HAND &amp; BODY</a>
+					</li>
+					<li>
+						<a href="/beauty_store/skincare">MAKEUP REMOVERS</a>
+					</li>
+					<li>
+						<a href="/beauty_store/skincare">EXFOLIATORS</a>
+					</li>
+					<li>
+						<a href="/beauty_store/skincare">MOISTURIZERS</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+</body>
+</html>
+{% endblock %}
